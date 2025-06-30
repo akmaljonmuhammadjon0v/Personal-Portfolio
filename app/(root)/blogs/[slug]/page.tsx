@@ -6,24 +6,31 @@ import Image from 'next/image';
 import ShareBtns from './components/share-btn';
 import parse from 'html-react-parser';
 import { Separator } from '@/components/ui/separator';
+import type { Metadata } from 'next';
 
+type PageProps = {
+	params: {
+		slug: string;
+	};
+};
+
+// SEO uchun metadata
 export async function generateMetadata({
 	params,
-}: {
-	params: { slug: string };
-}) {
+}: PageProps): Promise<Metadata> {
 	const blog = await getDetailedBlog(params.slug);
 
 	return {
 		title: blog.title,
 		description: blog.description,
 		openGraph: {
-			images: blog.image.url,
+			images: [blog.image.url],
 		},
 	};
 }
 
-async function Page({ params }: { params: { slug: string } }) {
+// Sahifa komponenti
+export default async function Page({ params }: PageProps) {
 	const blog = await getDetailedBlog(params.slug);
 
 	return (
@@ -57,9 +64,9 @@ async function Page({ params }: { params: { slug: string } }) {
 
 			<Image
 				src={blog.image.url}
-				alt='alt'
-				width={`1120`}
-				height={`595`}
+				alt='cover image'
+				width={1120}
+				height={595}
 				className='mt-4 rounded-md'
 			/>
 
@@ -81,8 +88,8 @@ async function Page({ params }: { params: { slug: string } }) {
 				<Image
 					src={blog.author.image.url}
 					alt='author'
-					width='155'
-					height='155'
+					width={155}
+					height={155}
 					className='rounded-md max-md:self-start'
 				/>
 				<div className='flex flex-1 flex-col space-y-4'>
@@ -97,5 +104,3 @@ async function Page({ params }: { params: { slug: string } }) {
 		</div>
 	);
 }
-
-export default Page;
