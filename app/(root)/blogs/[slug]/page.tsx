@@ -6,31 +6,27 @@ import Image from 'next/image';
 import ShareBtns from './components/share-btn';
 import parse from 'html-react-parser';
 import { Separator } from '@/components/ui/separator';
-import { Metadata } from 'next';
-
-type PageProps = {
-	params: {
-		slug: string;
-	};
-};
 
 export async function generateMetadata({
 	params,
-}: PageProps): Promise<Metadata> {
-	const blog = await getDetailedBlog(params.slug);
+}: {
+	params: { slug: string };
+}) {
+	const { slug } = await params; // params ni await qiling
+	const blog = await getDetailedBlog(slug);
 
 	return {
 		title: blog.title,
 		description: blog.description,
 		openGraph: {
-			images: [blog.image.url],
+			images: blog.image.url,
 		},
 	};
 }
 
-export default async function Page({ params }: PageProps) {
-	const blog = await getDetailedBlog(params.slug);
-
+export default async function Page({ params }: { params: { slug: string } }) {
+	const { slug } = await params; // params ni await qiling
+	const blog = await getDetailedBlog(slug);
 	return (
 		<div className='container mx-auto max-w-5xl pt-[15vh] px-10'>
 			<h1 className='font-space-grotesk text-4xl font-bold md:text-5xl lg:text-6xl'>
@@ -62,7 +58,7 @@ export default async function Page({ params }: PageProps) {
 
 			<Image
 				src={blog.image.url}
-				alt='blog image'
+				alt='alt'
 				width={1120}
 				height={595}
 				className='mt-4 rounded-md'
