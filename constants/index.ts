@@ -279,13 +279,6 @@ export const edu: Education[] = [
 		ctitle: 'Certificate:',
 		cdesc: 'Certificate:',
 	},
-	// {
-	// 	company: 'Geeksforgeeks',
-	// 	link: 'https://www.geeksforgeeks.org/',
-	// 	role: 'Backend | Frontend Developer',
-	// 	date: 'January 2018 - April 2018',
-	// 	logo: '/geks.png',
-	// },
 ];
 
 export const experiences = [
