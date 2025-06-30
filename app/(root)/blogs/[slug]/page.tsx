@@ -1,3 +1,5 @@
+// app/blog/[slug]/page.tsx
+
 import { getReadingTime } from '@/lib/utils';
 import { getDetailedBlog } from '@/service/blog.service';
 import { format } from 'date-fns';
@@ -6,31 +8,23 @@ import Image from 'next/image';
 import ShareBtns from './components/share-btn';
 import parse from 'html-react-parser';
 import { Separator } from '@/components/ui/separator';
-import type { Metadata } from 'next';
+import { Metadata } from 'next';
 
-type PageProps = {
-	params: {
-		slug: string;
-	};
-};
-
-// SEO uchun metadata
-export async function generateMetadata({
-	params,
-}: PageProps): Promise<Metadata> {
-	const blog = await getDetailedBlog(params.slug);
+export async function generateMetadata(props: {
+	params: { slug: string };
+}): Promise<Metadata> {
+	const blog = await getDetailedBlog(props.params.slug);
 
 	return {
 		title: blog.title,
 		description: blog.description,
 		openGraph: {
-			images: [blog.image.url],
+			images: [blog.image.url], // array bo'lishi kerak
 		},
 	};
 }
 
-// Sahifa komponenti
-export default async function Page({ params }: PageProps) {
+export default async function Page({ params }: { params: { slug: string } }) {
 	const blog = await getDetailedBlog(params.slug);
 
 	return (
@@ -64,7 +58,7 @@ export default async function Page({ params }: PageProps) {
 
 			<Image
 				src={blog.image.url}
-				alt='cover image'
+				alt='blog image'
 				width={1120}
 				height={595}
 				className='mt-4 rounded-md'
