@@ -1,5 +1,3 @@
-// app/blog/[slug]/page.tsx
-
 import { getReadingTime } from '@/lib/utils';
 import { getDetailedBlog } from '@/service/blog.service';
 import { format } from 'date-fns';
@@ -10,21 +8,27 @@ import parse from 'html-react-parser';
 import { Separator } from '@/components/ui/separator';
 import { Metadata } from 'next';
 
-export async function generateMetadata(props: {
-	params: { slug: string };
-}): Promise<Metadata> {
-	const blog = await getDetailedBlog(props.params.slug);
+type PageProps = {
+	params: {
+		slug: string;
+	};
+};
+
+export async function generateMetadata({
+	params,
+}: PageProps): Promise<Metadata> {
+	const blog = await getDetailedBlog(params.slug);
 
 	return {
 		title: blog.title,
 		description: blog.description,
 		openGraph: {
-			images: [blog.image.url], // array bo'lishi kerak
+			images: [blog.image.url],
 		},
 	};
 }
 
-export default async function Page({ params }: { params: { slug: string } }) {
+export default async function Page({ params }: PageProps) {
 	const blog = await getDetailedBlog(params.slug);
 
 	return (
