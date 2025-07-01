@@ -1,32 +1,51 @@
-import { getReadingTime } from '@/lib/utils';
 import { getDetailedBlog } from '@/service/blog.service';
+import { getReadingTime } from '@/lib/utils';
+import { Metadata, ResolvingMetadata } from 'next';
 import { format } from 'date-fns';
-import { CalendarDays, Clock, Minus } from 'lucide-react';
 import Image from 'next/image';
+import { CalendarDays, Clock, Minus } from 'lucide-react';
 import ShareBtns from './components/share-btn';
-import parse from 'html-react-parser';
 import { Separator } from '@/components/ui/separator';
+import parse from 'html-react-parser';
 
-export async function generateMetadata({
-	params,
-}: {
-	params: { slug: string };
-}) {
-	const { slug } = await params; // params ni await qiling
+// 👇 Props tipi Next.js 15 uchun
+type Props = {
+	params: Promise<{ slug: string }>;
+	searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+};
+
+// ✅ generateMetadata — Next.js 15 structure
+export async function generateMetadata(
+	{ params }: Props,
+	parent: ResolvingMetadata
+): Promise<Metadata> {
+	const { slug } = await params;
 	const blog = await getDetailedBlog(slug);
+
+	const previousImages = (await parent).openGraph?.images || [];
 
 	return {
 		title: blog.title,
 		description: blog.description,
 		openGraph: {
-			images: blog.image.url,
+			images: [
+				{
+					url: blog.image.url,
+					width: 1200,
+					height: 630,
+					alt: blog.title,
+				},
+				...previousImages,
+			],
 		},
 	};
 }
 
-export default async function Page({ params }: { params: { slug: string } }) {
-	const { slug } = await params; // params ni await qiling
+// ✅ Page — Next.js 15 structure
+export default async function Page({ params }: Props) {
+	const { slug } = await params;
 	const blog = await getDetailedBlog(slug);
+
 	return (
 		<div className='container mx-auto max-w-5xl pt-[15vh] px-10'>
 			<h1 className='font-space-grotesk text-4xl font-bold md:text-5xl lg:text-6xl'>
@@ -58,7 +77,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
 
 			<Image
 				src={blog.image.url}
-				alt='alt'
+				alt='cover image'
 				width={1120}
 				height={595}
 				className='mt-4 rounded-md'
