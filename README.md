@@ -1,7 +1,8 @@
 <p align="center">
   <img src="https://www.setu.ie/Craft/assets/banners/_800x418_crop_center-center_82_none/informationtech.jpg?mtime=1711539742" alt="Portfolio Banner" />
 </p>
-# 👋 Hi, I'm Akmaljon Muhammadjonov!
+
+## 👋 Hi, I'm Akmaljon Muhammadjonov!
 
 Hello! My name is Akmaljon. I am a passionate Frontend developer with more than 1 year of experience. I specialize in creating responsive, modern and user-friendly websites that leave a lasting impression, and I’m a React.js / Next.js developer.
 
