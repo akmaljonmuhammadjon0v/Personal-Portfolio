@@ -7,6 +7,7 @@ import { CalendarDays, Clock, Minus } from 'lucide-react';
 import ShareBtns from './components/share-btn';
 import { Separator } from '@/components/ui/separator';
 import parse from 'html-react-parser';
+import { notFound } from 'next/navigation';
 
 // 👇 Props tipi Next.js 15 uchun
 type Props = {
@@ -45,6 +46,10 @@ export async function generateMetadata(
 export default async function Page({ params }: Props) {
 	const { slug } = await params;
 	const blog = await getDetailedBlog(slug);
+	if (!blog) {
+		notFound();
+		console.log(`Blog with slug "${slug}" not found.`);
+	}
 
 	return (
 		<div className='container mx-auto max-w-5xl pt-[15vh] px-10'>
