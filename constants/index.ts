@@ -107,7 +107,7 @@ export const projects: Projects[] = [
 		description: 'A personal portfolio built with Next.js and Tailwind.',
 		image: '/projects/portfolio.webp',
 		link: 'https://akmaldev.uz',
-		gitlink: 'https://github.com/akmaljonmuhammadjonov07/Personal-Portfolio',
+		gitlink: 'https://github.com/akmaljonmuhammadjon0v/Personal-Portfolio',
 		skills: [
 			{ title: 'TypeScript' },
 			{ title: 'React.js' },
@@ -122,7 +122,7 @@ export const projects: Projects[] = [
 		description: 'A Gym App built with Next.js and Firebase.',
 		image: '/projects/gym.webp',
 		link: 'https://gym-training-eea21.web.app/',
-		gitlink: 'https://github.com/akmaljonmuhammadjonov07/Gym_App',
+		gitlink: 'https://github.com/akmaljonmuhammadjon0v/Gym_App',
 		skills: [
 			{ title: 'TypeScript' },
 			{ title: 'React.js' },
@@ -137,7 +137,7 @@ export const projects: Projects[] = [
 		description: 'A fast and SEO-friendly blog using Next.js and Hygraph.',
 		image: '/projects/blog.webp',
 		link: 'https://blog.akmaldev.uz/',
-		gitlink: 'https://github.com/akmaljonmuhammadjonov07/Praktikum_Blog_App',
+		gitlink: 'https://github.com/akmaljonmuhammadjon0v/Praktikum_Blog_App',
 		skills: [
 			{ title: 'TypeScript' },
 			{ title: 'React.js' },
@@ -152,7 +152,7 @@ export const projects: Projects[] = [
 		description: 'A weather app using React.js and OpenWeather API.',
 		image: '/projects/weather.webp',
 		link: 'https://weather.akmaldev.uz/',
-		gitlink: 'https://github.com/akmaljonmuhammadjonov07/weather-app',
+		gitlink: 'https://github.com/akmaljonmuhammadjon0v/weather-app',
 		skills: [
 			{ title: 'React.js' },
 			{ title: 'Tailwindcss' },
@@ -165,7 +165,7 @@ export const projects: Projects[] = [
 		description: 'A paint app using JavaScript and HTML5 Canvas.',
 		image: '/projects/paint.webp',
 		link: 'https://paint.akmaldev.uz/',
-		gitlink: 'https://github.com/akmaljonmuhammadjonov07/Paint_App',
+		gitlink: 'https://github.com/akmaljonmuhammadjon0v/Paint_Clone',
 		skills: [
 			{ title: 'JavaScript' },
 			{ title: 'HTML5' },
