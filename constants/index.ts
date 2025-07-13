@@ -327,7 +327,7 @@ export const footerLinks = [
 		link: 'https://www.linkedin.com/in/akmaljon-muhammadjonov',
 		icon: Linkedin,
 	},
-	{ link: 'https://github.com/akmaljonmuhammadjonov07/', icon: LucideGithub },
+	{ link: 'https://github.com/akmaljonmuhammadjon0v', icon: LucideGithub },
 ];
 
 export const contactLinks = [
