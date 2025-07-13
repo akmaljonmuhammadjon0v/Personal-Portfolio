@@ -1,14 +1,12 @@
-'use client';
-
 import CertCard from '@/components/Cards/CertificateCard';
 import { certificates } from '@/constants';
-import { useEffect } from 'react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+	title: 'Certificates',
+};
 
 export default function Page() {
-	useEffect(() => {
-		document.title = 'Certificates';
-	}, []);
-
 	return (
 		<section className='py-12 pb-0'>
 			<div className='container mx-auto px-6'>

@@ -10,7 +10,7 @@ import { ArrowRight } from 'lucide-react';
 import Skill from '@/app/(root)/_components/skills/skill';
 import { skills } from '@/constants';
 import Link from 'next/link';
-import { Button } from '../ui/button';
+import Resume from './resume';
 
 function HomePageModal() {
 	return (
@@ -77,17 +77,12 @@ function HomePageModal() {
 						</section>
 
 						<section>
-							<h2 className='text-lg font-semibold dark:text-gray-400 text-gray-600'>
+							<h2 className='text-lg font-semibold mb-2 dark:text-gray-400 text-gray-600'>
 								My Resume
 							</h2>
-							<Link
-								target='_blank'
-								rel='noreferrer'
-								href={'/resume/Resume.pdf'}
-								title='CV'
-							>
-								<Button>Download CV</Button>
-							</Link>
+							<div>
+								<Resume />
+							</div>
 						</section>
 						<section>
 							<div className='flex flex-col space-y-2'>

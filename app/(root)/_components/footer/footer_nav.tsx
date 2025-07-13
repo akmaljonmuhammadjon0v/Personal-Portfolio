@@ -1,5 +1,3 @@
-'use client';
-
 import { footerLinks } from '@/constants';
 import { Mail } from 'lucide-react';
 import React from 'react';

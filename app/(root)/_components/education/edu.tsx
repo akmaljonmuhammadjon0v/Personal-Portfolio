@@ -48,6 +48,7 @@ const Education = () => {
 														height={50}
 														src={e.logo}
 														alt={e.company}
+														priority
 													/>
 													<DialogTitle>{e.company}</DialogTitle>
 												</div>
@@ -73,7 +74,7 @@ const Education = () => {
 															rel='noopener noreferrer'
 															href={e.certificate}
 														>
-															<Badge>{e.cdesc}</Badge>
+															<Badge>{e.cdesc}</Badge>+{' '}
 														</a>
 													)}
 												</div>

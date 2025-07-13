@@ -1,9 +1,12 @@
-import Projects from '../_components/featured-projects/project';
 import Education from '../_components/education/edu';
 import SkillApp from '../_components/skills';
 import Image from 'next/image';
 import HomePageModal from '@/components/shared/HomePageModal';
+import dynamic from 'next/dynamic';
 
+const Projects = dynamic(
+	() => import('../_components/featured-projects/project')
+);
 function HomePage() {
 	return (
 		<div className='relative'>

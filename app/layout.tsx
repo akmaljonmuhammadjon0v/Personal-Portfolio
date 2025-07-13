@@ -1,9 +1,8 @@
-import type { Metadata } from 'next';
 import './globals.css';
+import type { Metadata } from 'next';
 import { ThemeProvider } from '@/components/providers/theme-provider';
 import { Toaster } from 'sonner';
 import { Roboto } from 'next/font/google';
-// import { GoogleAnalytics } from '@next/third-parties/google';
 import NextTopLoader from 'nextjs-toploader';
 import { ChildProps } from '@/types';
 
@@ -28,7 +27,9 @@ export const metadata: Metadata = {
 	keywords: [
 		'Akmaljon Muhammadjonov',
 		'Akmal Muhammadjonov',
+		'akmal muhammadjonov',
 		'Akmaldev',
+		'akmaldev',
 		'Personal Portfolio',
 		'Portfolio',
 		'Web Developer',
@@ -58,7 +59,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: ChildProps) {
 	return (
 		<html lang='en' suppressHydrationWarning>
-			<body className={`${robotoSans.variable}  antialiased scroll-smooth`}>
+			<body className={`${robotoSans.variable} antialiased scroll-smooth`}>
 				<ThemeProvider
 					attribute='class'
 					defaultTheme='system'
@@ -67,7 +68,6 @@ export default function RootLayout({ children }: ChildProps) {
 				>
 					<NextTopLoader showSpinner={false} />
 					<Toaster position='top-center' />
-					{/* <GoogleAnalytics gaId='G-2BT7Y69RES' /> */}
 					{children}
 				</ThemeProvider>
 			</body>

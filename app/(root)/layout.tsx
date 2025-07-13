@@ -1,8 +1,9 @@
 import { ChildProps } from '@/types';
 
-import Footer from './_components/footer/footer';
 import Navbar from '@/components/shared/navbar';
+import dynamic from 'next/dynamic';
 
+const Footer = dynamic(() => import('./_components/footer/footer'));
 function Layout({ children }: ChildProps) {
 	return (
 		<main>

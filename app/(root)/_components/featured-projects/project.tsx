@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 import { TooltipProvider } from '@/components/ui/tooltip';
 import { featured_projects } from '@/constants';

@@ -1,13 +1,12 @@
-'use client';
-import { useEffect } from 'react';
 import ProjectCard from '@/components/Cards/ProjectCard';
 import { projects } from '@/constants';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+	title: 'All Projects',
+};
 
 export default function Page() {
-	useEffect(() => {
-		document.title = 'All Projects';
-	}, []);
-
 	return (
 		<section className='py-12 pb-0'>
 			<div className='container mx-auto px-6'>

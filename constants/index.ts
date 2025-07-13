@@ -191,7 +191,7 @@ export const featured_projects: FeaturedProject[] = [
 		title: 'CMS Blog-App',
 		img: '/projects/blog.webp',
 		weblink: 'https://blog.akmaldev.uz/',
-		gitlink: 'https://github.com/akmaljonmuhammadjonov07/Praktikum_Blog_App',
+		gitlink: 'https://github.com/akmaljonmuhammadjon0v/Praktikum_Blog_App',
 		skills: [
 			{ title: 'Next.js', icon: '/next.webp' },
 			{ title: 'React.js', icon: '/react.webp' },
@@ -205,7 +205,7 @@ export const featured_projects: FeaturedProject[] = [
 		title: 'Gym App',
 		img: '/projects/gym.webp',
 		weblink: 'https://gym-training-eea21.web.app/',
-		gitlink: 'https://github.com/akmaljonmuhammadjonov07/Gym_App',
+		gitlink: 'https://github.com/akmaljonmuhammadjon0v/Gym_App',
 		skills: [
 			{ title: 'Next.js', icon: '/next.webp' },
 			{ title: 'React.js', icon: '/react.webp' },
@@ -283,38 +283,38 @@ export const edu: Education[] = [
 
 export const experiences = [
 	{
-		company: 'Atomic Finance',
-		role: 'Bitcoin Protocol Engineer',
+		company: 'Empty',
+		role: 'Frontend Developer',
 		date: 'May 2021 - Oct 2022',
 		logo: '/codemy.png',
 	},
 	{
-		company: 'Shopify',
-		role: 'Software Engineer',
+		company: 'Empty',
+		role: 'Frontend Developer',
 		date: 'January 2021 - April 2021',
 		logo: '/codemy.png',
 	},
 	{
-		company: 'Nvidia',
-		role: 'Software Engineer',
+		company: 'Empty',
+		role: 'Frontend Developer',
 		date: 'January 2020 - April 2020',
 		logo: '/codemy.png',
 	},
 	{
-		company: 'Splunk',
-		role: 'Software Engineer',
+		company: 'Empty',
+		role: 'Frontend Developer',
 		date: 'January 2019 - April 2019',
 		logo: '/codemy.png',
 	},
 	{
-		company: 'Lime',
-		role: 'Software Engineer',
+		company: 'Empty',
+		role: 'Frontend Developer',
 		date: 'January 2018 - April 2018',
 		logo: '/codemy.png',
 	},
 	{
-		company: 'Mitre Media',
-		role: 'Software Engineer',
+		company: 'Empty',
+		role: 'Frontend Developer',
 		date: 'May 2017 - August 2017',
 		logo: '/codemy.png',
 	},
@@ -337,6 +337,6 @@ export const contactLinks = [
 		link: 'https://www.linkedin.com/in/akmaljon-muhammadjonov',
 		icon: Linkedin,
 	},
-	{ link: 'https://github.com/akmaljonmuhammadjonov07/', icon: Github },
+	{ link: 'https://github.com/akmaljonmuhammadjon0v/', icon: Github },
 	{ link: 'mailto:info@akmaldev.uz', icon: Mail },
 ];
