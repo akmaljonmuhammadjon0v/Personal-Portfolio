@@ -21,6 +21,7 @@ const FeaturedProjectCard = ({ project }: FeaturedProjectCardProps) => {
 						alt={project.title}
 						width={500}
 						height={500}
+						loading='lazy'
 						className='w-full h-72 object-cover rounded-lg border-4 group-hover:border-[#76aaf82d] transition-all duration-300'
 					/>
 				</figure>

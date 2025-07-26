@@ -322,7 +322,7 @@ export const experiences = [
 
 export const footerLinks = [
 	{ link: 'https://t.me/akmaljonmuhammadjon0v', icon: Send },
-	{ link: 'https://www.instagram.com/akmal__dev/', icon: Instagram },
+	{ link: 'https://www.instagram.com/akmaljonmuhammadjon0v/', icon: Instagram },
 	{
 		link: 'https://www.linkedin.com/in/akmaljon-muhammadjonov',
 		icon: Linkedin,
@@ -332,7 +332,7 @@ export const footerLinks = [
 
 export const contactLinks = [
 	{ link: 'https://t.me/akmaljonmuhammadjon0v', icon: Send },
-	{ link: 'https://www.instagram.com/akmal__dev/', icon: Instagram },
+	{ link: 'https://www.instagram.com/akmaljonmuhammadjon0v/', icon: Instagram },
 	{
 		link: 'https://www.linkedin.com/in/akmaljon-muhammadjonov',
 		icon: Linkedin,

@@ -41,5 +41,5 @@ Hello! My name is Akmaljon. I am a passionate Frontend developer with more than 
 ## 📫 Connect with me
 
 [![Telegram Badge](https://img.shields.io/badge/-akmaljonmuhammadjon0v-26A5E4?style=flat-square&logo=telegram&logoColor=white)](https://t.me/akmaljonmuhammadjon0v)
-[![Instagram Badge](https://img.shields.io/badge/-akmal__dev-E4405F?style=flat-square&logo=instagram&logoColor=white)](https://instagram.com/akmal__dev)
+[![Instagram Badge](https://img.shields.io/badge/-akmal__dev-E4405F?style=flat-square&logo=instagram&logoColor=white)](https://www.instagram.com/akmaljonmuhammadjon0v/)
 [![LinkedIn Badge](https://img.shields.io/badge/-akmaljon--muhammadjonov-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/akmaljon-muhammadjonov)

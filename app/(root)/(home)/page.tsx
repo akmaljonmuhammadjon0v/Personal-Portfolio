@@ -18,8 +18,8 @@ function HomePage() {
 						width={120}
 						height={120}
 						loading='eager'
-						priority
 						className='mb-10 object-cover object-center rounded-full text-white'
+						priority
 					/>
 					<div className='text-center lg:w-2/3 grid justify-items-center'>
 						<h1 className='title-font sm:text-4xl text-3xl mb-4 font-semibold text-gray-900 dark:text-blue-400'>
